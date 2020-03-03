@@ -3,7 +3,7 @@
 //process 对象是 EventEmitter 的实例。
 //把process理解成系统容器的监听事件，让你想处理系统的时间，就用process
 
-/*// case1：对象解构常见变量 运行测试命令：node --inspect 16-process.js --test a=1 b=2
+// case1：对象解构常见变量 运行测试命令：node --inspect 16-process.js --test a=1 b=2
 const {argv, argv0, execArgv, execPath} = process;
 
 //固定值
@@ -18,12 +18,12 @@ console.log('argv0:' + argv0);
 console.log('exec:' + execArgv);
 
 //node执行路径
-console.log('execPath:' + execPath);*/
+console.log('execPath:' + execPath);
 
-/*//case2: env变量
+//case2: env变量
 const {env} = process;
 console.log(env);
-console.log(env['PATH']);*/
+console.log(env['PATH']);
 
 //case3: cwd方法
 console.log(process.cwd());

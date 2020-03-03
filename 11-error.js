@@ -3,6 +3,7 @@
 
 //case1:捕捉异常
 // JavaScript 的 throw 机制的任何使用都会引起异常，异常必须使用 try…catch 处理，否则 Node.js 进程会立即退出。
+/*
 try {
     const m = 1;
     const n = m + z;
@@ -10,11 +11,12 @@ try {
     // 在这里处理错误。
     console.log(err);
 }
+*/
 
 //case2:异步中的异常捕捉
-/*const fs = require('fs');
+const fs = require('fs');
 try {
-    fs.readFile('一个不存在的文件', (err, data) => {
+    fs.readFile('xdsd', (err, data) => {
         if (err) {
             console.error('读取文件出错！', err);
         }
@@ -22,5 +24,5 @@ try {
     });
 } catch (e) {
     //这里捕捉没有任何意义
-}*/
+}
 

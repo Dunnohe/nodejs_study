@@ -6,3 +6,5 @@ const modB = require('./06-cycle_require_b');
 // 执行了 test = 'A' ,
 // 然后引入b，执行test = 'B' 然后执行了 引入a，但是a已经被cache了，于是继续执行，test = 'bb'
 // 执行完，回来继续执行a的代码
+
+

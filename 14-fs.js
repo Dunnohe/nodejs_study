@@ -7,6 +7,8 @@ const fs = require('fs');
 // 注意：使用异步的方法无法保证执行顺序。
 // 推荐使用异步调用方式，对性能有帮助。
 
+
+//guava completableFuture future future.get()
 //case1：读取目录
 /*async function printAllDirName(path) {
     const dir = await fs.promises.readdir(path);
@@ -42,14 +44,14 @@ printAllDirName('./').catch(console.error);*/
     console.log(stats.isFile());
 });*/
 
-//case5:stream
+//case5:stream in -> pipe -> out
 let rs = fs.createReadStream('resources/file.txt');
 rs.pipe(process.stdout);
 rs.close();
 
 const ws = fs.createWriteStream('resources/file.txt');
 for (let i = 0; i < 3; i++) {
-    ws.write("数字：${i}");
+    ws.write(`数字haha：${i}`);
 }
 ws.close();
 

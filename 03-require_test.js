@@ -6,17 +6,19 @@
 
 const mod = require('./02-module_test');
 
-//case1：打印覆盖写
-console.log(mod.test);
+//case3：打印全局变量
+console.log(globalNumber);
+
+//case4：打印局部变量
+console.log(mod.aaa);
+
+//mod._numberOutputMethod();
 
 //case2：打印简写
 console.log(mod.B);
 
-//case3：打印全局变量
-console.log(globalNumbers);
+//case1：打印覆盖写
+console.log(mod.test);
 
-//case4：打印局部变量
-console.log(mod.modNumber);
-
-//case5：调用模块方法
-mod._numberOutputMethod();
+/*//case5：调用模块方法
+mod._numberOutputMethod();*/
